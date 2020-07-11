@@ -1,0 +1,32 @@
+#neptune-wrapper {
+
+}
+
+#uranus-wrapper {
+  margin-top: -1350px;
+}
+
+#saturn-wrapper {
+  margin-top: -1225px;
+}
+
+#jupiter-wrapper {
+  margin-top: -1065px;
+}
+
+#mars-wrapper {
+  margin-top: -875px;
+}
+
+#earth-wrapper {
+  margin-top: -690px;
+}
+
+#venus-wrapper {
+  margin-top: -565px;
+}
+
+#mercury-wrapper {
+  margin-top: -440px;
+  margin-bottom: 525px;
+}
