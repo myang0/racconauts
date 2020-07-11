@@ -1,6 +1,10 @@
-.orbit {
-  display: block;
-  margin: auto;
+body {
+  background: #12007a;
+}
+
+.wrapper {
+  margin-top: 50px;
+  margin-left: 50px;
 }
 
 .planet {
