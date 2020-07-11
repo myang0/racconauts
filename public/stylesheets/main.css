@@ -1,5 +1,9 @@
-div {
-  width: 100px;
-  height: 100px;
-  color: black;
+.orbit {
+  display: block;
+  margin: auto;
+}
+
+.planet {
+  position: absolute;
+  z-index: 999;
 }
