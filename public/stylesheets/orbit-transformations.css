@@ -3,30 +3,42 @@
 }
 
 #uranus-wrapper {
-  margin-top: -1350px;
+  margin-top: -1360px;
+  margin-left: 50px;
 }
 
 #saturn-wrapper {
-  margin-top: -1225px;
+  margin-top: -1230px;
+  margin-left: 125px;
 }
 
 #jupiter-wrapper {
   margin-top: -1065px;
+  margin-left: 212px;
 }
 
 #mars-wrapper {
   margin-top: -875px;
+  margin-left: 325px;
 }
 
 #earth-wrapper {
-  margin-top: -690px;
+  margin-top: -695px;
+  margin-left: 387px;
 }
 
 #venus-wrapper {
-  margin-top: -565px;
+  margin-top: -570px;
+  margin-left: 450px;
 }
 
 #mercury-wrapper {
-  margin-top: -440px;
-  margin-bottom: 525px;
+  margin-top: -445px;
+  margin-left: 512px;
+}
+
+#sun-wrapper {
+  margin-top: -315px;
+  margin-left: 580px;
+  margin-bottom: 825px;
 }
