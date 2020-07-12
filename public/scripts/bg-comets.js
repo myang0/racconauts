@@ -41,7 +41,7 @@ function cometRandomValues() {
 
   anime({
     targets: '.comet',
-    translateX: function() { return -window.innerWidth - anime.random(250, 500) },
+    translateX: -1000,
     translateY: function() { return anime.random(-400, 400); },
     easing: 'easeInOutQuad',
     delay: function() { return anime.random(1000, 20000) },
