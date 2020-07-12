@@ -1,199 +1,250 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <% include ../partials/header.ejs %>
 
-    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css"/>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/orbit-transformations.css"/>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/planet-transformations.css"/>
-  </head>
+<head>
+  <% include ../partials/header.ejs %>
 
-  <body>
-    <div class="starfield">
-      <div class="hide-overflow">
-        
+  <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/orbit-transformations.css" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/planet-transformations.css" />
+</head>
+
+<body>
+  <div class="starfield">
+    <div class="hide-overflow">
+
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div id="neptune-wrapper">
+      <div class="planet" id="neptune">
+        <p class="planet-label" id="nep-label">Neptune</p>
+        <svg class="planet-shape" id="nep-shape" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="neptune-radial" gradientTransform="translate(-50 -50) scale(1.5)"
+              gradientUnits="userSpaceOnUse">
+              <!-- light to dark -->
+              <stop stop-color="#84B5FF" />
+              <stop offset="1" stop-color="#967CFF" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <circle class="outlinePlanet" cx="50" cy="50" r="40" fill="url('#neptune-radial')"
+            vector-effect="non-scaling-stroke" />
+        </svg>
       </div>
+      <svg class="orbit" id="neptune-orbit" viewBox="0 0 2000 2000" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.5,1000a997.5,997.5 0 1,0 1995,0a997.5,997.5 0 1,0 -1995,0" vector-effect="non-scaling-stroke" />
+      </svg>
     </div>
 
-    <div class="wrapper">
-      <div id="neptune-wrapper">
-        <div class="planet" id="neptune">
-          <p class="planet-label" id="nep-label">Neptune</p>
-          <svg width="40" height="40" viewBox="0 0 101 105" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M98.5 52.5C98.5 80.2066 76.919 102.5 50.5 102.5C24.081 102.5 2.5 80.2066 2.5 52.5C2.5 24.7934 24.081 2.5 50.5 2.5C76.919 2.5 98.5 24.7934 98.5 52.5Z" fill="url(#paint0_radial)" style="mix-blend-mode:hard-light"/>
-            <path d="M98.5 52.5C98.5 80.2066 76.919 102.5 50.5 102.5C24.081 102.5 2.5 80.2066 2.5 52.5C2.5 24.7934 24.081 2.5 50.5 2.5C76.919 2.5 98.5 24.7934 98.5 52.5Z" stroke="#A3C3F4" stroke-width="5"/>
-            <defs>
-            <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(17.9693 13.8073) rotate(46.0247) scale(101.287 100.901)">
-            <stop stop-color="#A3C3F4"/>
-            <stop offset="1" stop-color="#CFC4FF" stop-opacity="0"/>
+    <div id="uranus-wrapper">
+      <div class="planet" id="uranus">
+        <p class="planet-label" id="ura-label">Uranus</p>
+        <svg class="planet-shape" id="ura-shape" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="uranus-radial" gradientTransform="translate(-50 -50) scale(1.5)"
+              gradientUnits="userSpaceOnUse">
+              <!-- light to dark -->
+              <stop stop-color="#A5FFD4" />
+              <stop offset="1" stop-color="#88EAFF" stop-opacity="0" />
             </radialGradient>
-            </defs>
-          </svg>
-        </div>
-        <svg class="orbit" id="neptune-orbit" width="1404" height="1404" viewBox="0 0 1404 1404" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path  d="M2 702C2 1088.6 315.401 1402 702 1402C1088.6 1402 1402 1088.6 1402 702C1402 315.401 1088.6 2 702 2C315.401 2 2 315.401 2 702Z" stroke="#FFE7E7" stroke-width="1"/>
+          </defs>
+          <circle class="outlinePlanet" cx="50" cy="50" r="40" fill="url('#uranus-radial')"
+            vector-effect="non-scaling-stroke" />
         </svg>
       </div>
-      
-      <div id="uranus-wrapper">
-        <div class="planet" id="uranus">
-          <p class="planet-label" id="ura-label">Uranus</p>
-          <svg width="50" height="50" viewBox="0 0 133 137" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M130.5 68.5C130.5 105.021 101.777 134.5 66.5 134.5C31.2231 134.5 2.5 105.021 2.5 68.5C2.5 31.9789 31.2231 2.5 66.5 2.5C101.777 2.5 130.5 31.9789 130.5 68.5Z" fill="url(#paint0_radial)" style="mix-blend-mode:hard-light"/>
-            <path d="M130.5 68.5C130.5 105.021 101.777 134.5 66.5 134.5C31.2231 134.5 2.5 105.021 2.5 68.5C2.5 31.9789 31.2231 2.5 66.5 2.5C101.777 2.5 130.5 31.9789 130.5 68.5Z" stroke="#A3F4E1" stroke-width="5"/>
-            <defs>
-            <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(23.6626 18.0153) rotate(45.7611) scale(132.746 132.278)">
-            <stop stop-color="#A5FFD4"/>
-            <stop offset="1" stop-color="#88EAFF" stop-opacity="0"/>
-            </radialGradient>
-            </defs>
-          </svg>
-        </div>
-        <svg class="orbit" id="uranus-orbit" width="1304" height="1304" viewBox="0 0 1304 1304" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 652C2 1010.99 293.015 1302 652 1302C1010.99 1302 1302 1010.99 1302 652C1302 293.015 1010.99 2 652 2C293.015 2 2 293.015 2 652Z" stroke="#FFE7E7" stroke-width="1"/>
-        </svg>        
-      </div>
-  
-      <div id="saturn-wrapper">
-        <div class="planet" id="saturn">
-          <p class="planet-label" id="sat-label">Saturn</p>
-          <svg width="80" height="80" viewBox="0 0 158 165" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M155.5 82.5C155.5 126.786 121.149 162.5 79.0001 162.5C36.8514 162.5 2.50012 126.786 2.50012 82.5C2.50012 38.214 36.8514 2.5 79.0001 2.5C121.149 2.5 155.5 38.214 155.5 82.5Z" fill="url(#paint0_radial)" style="mix-blend-mode:hard-light"/>
-            <path d="M155.5 82.5C155.5 126.786 121.149 162.5 79.0001 162.5C36.8514 162.5 2.50012 126.786 2.50012 82.5C2.50012 38.214 36.8514 2.5 79.0001 2.5C121.149 2.5 155.5 38.214 155.5 82.5Z" stroke="#FFF59C" stroke-width="5"/>
-            <defs>
-            <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(28.1105 21.6973) rotate(46.1538) scale(158.82 158.187)">
-            <stop stop-color="#FFF59C"/>
-            <stop offset="0.510417" stop-color="#FFD79A" stop-opacity="0.6"/>
-            <stop offset="1" stop-color="#83F8FF" stop-opacity="0"/>
-            </radialGradient>
-            </defs>
-          </svg>
-        </div>
+      <svg class="orbit" id="uranus-orbit" viewBox="0 0 2000 2000" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.5,1000a997.5,997.5 0 1,0 1995,0a997.5,997.5 0 1,0 -1995,0" vector-effect="non-scaling-stroke" />
+      </svg>
+    </div>
 
-        <svg class="orbit" id="saturn-orbit" width="1154" height="1154" viewBox="0 0 1154 1154" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 577C2 894.564 259.436 1152 577 1152C894.564 1152 1152 894.564 1152 577C1152 259.436 894.564 2 577 2C259.436 2 2 259.436 2 577Z" stroke="#FFE7E7" stroke-width="1"/>
-        </svg>        
-      </div>
-  
-      <div id="jupiter-wrapper">
-        <div class="planet" id="jupiter">
-          <p class="planet-label" id="jup-label">Jupiter</p>
-          <svg width="90" height="90" viewBox="0 0 198 205" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M195.5 102.5C195.5 157.811 152.214 202.5 99 202.5C45.7857 202.5 2.5 157.811 2.5 102.5C2.5 47.1889 45.7857 2.5 99 2.5C152.214 2.5 195.5 47.1889 195.5 102.5Z" fill="url(#paint0_radial)" style="mix-blend-mode:hard-light"/>
-            <path d="M195.5 102.5C195.5 157.811 152.214 202.5 99 202.5C45.7857 202.5 2.5 157.811 2.5 102.5C2.5 47.1889 45.7857 2.5 99 2.5C152.214 2.5 195.5 47.1889 195.5 102.5Z" stroke="#FFDE9F" stroke-width="5"/>
-            <defs>
-            <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(35.227 26.9572) rotate(45.9074) scale(198.142 197.414)">
-            <stop stop-color="#FFDE9F"/>
-            <stop offset="0.510417" stop-color="#FFBE99"/>
-            <stop offset="1" stop-color="#FF7DA4" stop-opacity="0"/>
+    <div id="saturn-wrapper">
+      <div class="planet" id="saturn">
+        <p class="planet-label" id="sat-label">Saturn</p>
+        <svg class="planet-shape" id="sat-shape" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="saturn-radial" gradientTransform="translate(-50 -50) scale(1.5)"
+              gradientUnits="userSpaceOnUse">
+              <!-- light to dark -->
+              <stop stop-color="#FFF59C" />
+              <stop offset="0.5" stop-color="#FFD79A" stop-opacity="0.5" />
+              <stop offset="1" stop-color="#83F8FF" stop-opacity="0" />
             </radialGradient>
-            </defs>
-          </svg>
-        </div>
-        <svg class="orbit" id="jupiter-orbit" width="979" height="979" viewBox="0 0 979 979" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 489.5C2 757.91 221.09 977 489.5 977C757.91 977 977 757.91 977 489.5C977 221.09 757.91 2 489.5 2C221.09 2 2 221.09 2 489.5Z" stroke="#FFE7E7" stroke-width="1"/>
-        </svg>        
-      </div>
-        
-      <div id="mars-wrapper">
-        <div class="planet" id="mars">
-          <p class="planet-label" id="mar-label">Mars</p>
-          <svg width="36" height="36" viewBox="0 0 74 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M71.5 38.5C71.5 58.4768 55.9611 74.5 37 74.5C18.0389 74.5 2.5 58.4768 2.5 38.5C2.5 18.5232 18.0389 2.5 37 2.5C55.9611 2.5 71.5 18.5232 71.5 38.5Z" fill="url(#paint0_radial)" style="mix-blend-mode:hard-light"/>
-            <path d="M71.5 38.5C71.5 58.4768 55.9611 74.5 37 74.5C18.0389 74.5 2.5 58.4768 2.5 38.5C2.5 18.5232 18.0389 2.5 37 2.5C55.9611 2.5 71.5 18.5232 71.5 38.5Z" stroke="#FF6C4B" stroke-width="5"/>
-            <defs>
-            <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13.1656 10.1254) rotate(46.0505) scale(74.2447 73.9592)">
-            <stop stop-color="#FF6C4B"/>
-            <stop offset="1" stop-color="#FF29EA" stop-opacity="0"/>
-            </radialGradient>
-            </defs>
-          </svg>
-        </div>
-        <svg class="orbit" id="mars-orbit" width="754" height="754" viewBox="0 0 754 754" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 377C2 584.107 169.893 752 377 752C584.107 752 752 584.107 752 377C752 169.893 584.107 2 377 2C169.893 2 2 169.893 2 377Z" stroke="#FFE7E7" stroke-width="1"/>
-        </svg>        
-      </div>
-  
-      <div id="earth-wrapper">
-        <div class="planet" id="earth">
-          <p class="planet-label" id="ear-label">Earth</p>
-          <svg width="40" height="40" viewBox="0 0 83 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M80.5 42.5C80.5 64.6478 62.9833 82.5 41.5 82.5C20.0167 82.5 2.5 64.6478 2.5 42.5C2.5 20.3522 20.0167 2.5 41.5 2.5C62.9833 2.5 80.5 20.3522 80.5 42.5Z" fill="url(#paint0_radial)" style="mix-blend-mode:hard-light"/>
-            <path d="M80.5 42.5C80.5 64.6478 62.9833 82.5 41.5 82.5C20.0167 82.5 2.5 64.6478 2.5 42.5C2.5 20.3522 20.0167 2.5 41.5 2.5C62.9833 2.5 80.5 20.3522 80.5 42.5Z" stroke="#64FFFF" stroke-width="5"/>
-            <defs>
-            <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(14.7669 11.1774) rotate(45.5943) scale(82.5949 82.315)">
-            <stop stop-color="#64FFFF"/>
-            <stop offset="1" stop-color="#5C80FF" stop-opacity="0"/>
-            </radialGradient>
-            </defs>
-          </svg>
-        </div>
-        <svg class="orbit" id="earth-orbit" width="629" height="629" viewBox="0 0 629 629" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path id="earth-orbit" d="M2 314.5C2 487.089 141.911 627 314.5 627C487.089 627 627 487.089 627 314.5C627 141.911 487.089 2 314.5 2C141.911 2 2 141.911 2 314.5Z" stroke="#FFE7E7" stroke-width="1"/>
-        </svg>
-      </div>
-  
-      <div id="venus-wrapper">
-        <div class="planet" id="venus">
-          <p class="planet-label" id="ven-label">Venus</p>
-          <svg width="38" height="38" viewBox="0 0 83 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M80.5 42.5C80.5 64.6478 62.9833 82.5 41.5 82.5C20.0167 82.5 2.5 64.6478 2.5 42.5C2.5 20.3522 20.0167 2.5 41.5 2.5C62.9833 2.5 80.5 20.3522 80.5 42.5Z" fill="url(#paint0_radial)" style="mix-blend-mode:hard-light"/>
-            <path d="M80.5 42.5C80.5 64.6478 62.9833 82.5 41.5 82.5C20.0167 82.5 2.5 64.6478 2.5 42.5C2.5 20.3522 20.0167 2.5 41.5 2.5C62.9833 2.5 80.5 20.3522 80.5 42.5Z" stroke="#FFC5B8" stroke-width="5"/>
-            <defs>
-            <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(14.7669 11.1774) rotate(45.5943) scale(82.5949 82.315)">
-            <stop stop-color="#FFC5B8"/>
-            <stop offset="1" stop-color="#FF9472" stop-opacity="0"/>
-            </radialGradient>
-            </defs>
-          </svg>    
-        </div>
-        <svg class="orbit" id="venus-orbit" width="504" height="504" viewBox="0 0 504 504" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 252C2 390.071 113.929 502 252 502C390.071 502 502 390.071 502 252C502 113.929 390.071 2 252 2C113.929 2 2 113.929 2 252Z" stroke="#FFE7E7" stroke-width="1"/>
-        </svg>
-      </div>
-  
-      <div id="mercury-wrapper">
-        <div class="planet" id="mercury">
-          <p class="planet-label" id="mer-label">Mercury</p>
-          <svg width="30" height="30" viewBox="0 0 54 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M51.5 27.5C51.5 41.3506 40.4879 52.5 27 52.5C13.5121 52.5 2.5 41.3506 2.5 27.5C2.5 13.6494 13.5121 2.5 27 2.5C40.4879 2.5 51.5 13.6494 51.5 27.5Z" fill="url(#paint0_radial)" style="mix-blend-mode:hard-light"/>
-            <path d="M51.5 27.5C51.5 41.3506 40.4879 52.5 27 52.5C13.5121 52.5 2.5 41.3506 2.5 27.5C2.5 13.6494 13.5121 2.5 27 2.5C40.4879 2.5 51.5 13.6494 51.5 27.5Z" stroke="#FFE456" stroke-width="5"/>
-            <defs>
-            <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(9.60736 7.23242) rotate(45.4379) scale(53.5873 53.4109)">
-            <stop stop-color="#FFE456"/>
-            <stop offset="1" stop-color="#FF8E25" stop-opacity="0"/>
-            </radialGradient>
-            </defs>
-          </svg>
-        </div>
-        <svg class="orbit" id="mercury-orbit" width="379" height="379" viewBox="0 0 379 379" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 189.5C2 293.053 85.9466 377 189.5 377C293.053 377 377 293.053 377 189.5C377 85.9466 293.053 2 189.5 2C85.9466 2 2 85.9466 2 189.5Z" stroke="#FFE7E7" stroke-width="1"/>
+          </defs>
+          <circle class="outlinePlanet" cx="50" cy="50" r="40" fill="url('#saturn-radial')" />
+          <g transform-origin="50 50" transform="rotate(-25)">
+            <ellipse cx="50" cy="50" rx="50" ry="15" fill="none" stroke="#FFD79A" stroke-width="4" opacity="0.5" />
+            <ellipse cx="50" cy="48" rx="50" ry="15" fill="none" stroke="FFF59C" stroke-width="2" opacity="0.8" />
+          </g>
         </svg>
       </div>
 
-      <div id="sun-wrapper">
-        <div id="sun">
-          <svg width="240" height="240" viewBox="0 0 326 327" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g style="mix-blend-mode:hard-light">
-            <path d="M323.5 163.5C323.5 252.425 251.634 324.5 163 324.5C74.3655 324.5 2.5 252.425 2.5 163.5C2.5 74.5749 74.3655 2.5 163 2.5C251.634 2.5 323.5 74.5749 323.5 163.5Z" fill="url(#paint0_radial)"/>
-            <path d="M323.5 163.5C323.5 252.425 251.634 324.5 163 324.5C74.3655 324.5 2.5 252.425 2.5 163.5C2.5 74.5749 74.3655 2.5 163 2.5C251.634 2.5 323.5 74.5749 323.5 163.5Z" stroke="#FFDC7B" stroke-width="5"/>
-            </g>
-            <defs>
-            <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(207.086 247.011) scale(236.694 237.42)">
-            <stop stop-color="#52A9FF" stop-opacity="0"/>
-            <stop offset="0.4221" stop-color="#FF6161" stop-opacity="0.3"/>
-            <stop offset="1" stop-color="#FFDC7B"/>
+      <svg class="orbit" id="saturn-orbit" viewBox="0 0 2000 2000" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.5,1000a997.5,997.5 0 1,0 1995,0a997.5,997.5 0 1,0 -1995,0" vector-effect="non-scaling-stroke" />
+      </svg>
+    </div>
+
+    <div id="jupiter-wrapper">
+      <div class="planet" id="jupiter">
+        <p class="planet-label" id="jup-label">Jupiter</p>
+        <svg class="planet-shape" id="jup-shape" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="jupiter-radial" gradientTransform="translate(-50 -50) scale(1.5)"
+              gradientUnits="userSpaceOnUse">
+              <!-- light to dark -->
+              <stop stop-color="#FFDE9F" />
+              <stop offset="0.5" stop-color="#FFBE99" stop-opacity="0.5" />
+              <stop offset="1" stop-color="#FF7DA4" stop-opacity="0" />
             </radialGradient>
-            </defs>
-          </svg>
-        </div>
+          </defs>
+          <circle class="outlinePlanet" cx="50" cy="50" r="40" fill="url('#jupiter-radial')"
+            vector-effect="non-scaling-stroke" />
+        </svg>
+      </div>
+      <svg class="orbit" id="jupiter-orbit" viewBox="0 0 2000 2000" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.5,1000a997.5,997.5 0 1,0 1995,0a997.5,997.5 0 1,0 -1995,0" vector-effect="non-scaling-stroke" />
+      </svg>
+    </div>
+
+    <div id="mars-wrapper">
+      <div class="planet" id="mars">
+        <p class="planet-label" id="mar-label">Mars</p>
+        <svg class="planet-shape" id="mar-shape" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="mars-radial" gradientTransform="translate(-50 -50) scale(1.5)"
+              gradientUnits="userSpaceOnUse">
+              <!-- light to dark -->
+              <stop stop-color="#FF6C4B" />
+              <stop offset="1" stop-color="#FF29EA" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <circle class="outlinePlanet" cx="50" cy="50" r="40" fill="url('#mars-radial')"
+            vector-effect="non-scaling-stroke" />
+        </svg>
+      </div>
+      <svg class="orbit" id="mars-orbit" viewBox="0 0 2000 2000" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.5,1000a997.5,997.5 0 1,0 1995,0a997.5,997.5 0 1,0 -1995,0" vector-effect="non-scaling-stroke" />
+      </svg>
+    </div>
+
+    <div id="earth-wrapper">
+      <div class="planet" id="earth">
+        <p class="planet-label" id="ear-label">Earth</p>
+        <svg class="planet-shape" id="ear-shape" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="earth-radial" gradientTransform="translate(-50 -50) scale(1.5)"
+              gradientUnits="userSpaceOnUse">
+              <!-- light to dark -->
+              <stop stop-color="#64FFFF" />
+              <stop offset="1" stop-color="#5C80FF" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <circle class="outlinePlanet" cx="50" cy="50" r="40" fill="url('#earth-radial')"
+            vector-effect="non-scaling-stroke" />
+        </svg>
+      </div>
+      <svg class="orbit" id="earth-orbit" viewBox="0 0 2000 2000" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.5,1000a997.5,997.5 0 1,0 1995,0a997.5,997.5 0 1,0 -1995,0" vector-effect="non-scaling-stroke" />
+      </svg>
+    </div>
+
+    <div id="venus-wrapper">
+      <div class="planet" id="venus">
+        <p class="planet-label" id="ven-label">Venus</p>
+        <svg class="planet-shape" id="ven-shape" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="venus-radial" gradientTransform="translate(-50 -50) scale(1.5)"
+              gradientUnits="userSpaceOnUse">
+              <!-- light to dark -->
+              <stop stop-color="#FFC5B8" />
+              <stop offset="1" stop-color="#FF9472" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <circle class="outlinePlanet" cx="50" cy="50" r="40" fill="url('#venus-radial')"
+            vector-effect="non-scaling-stroke" />
+        </svg>
+      </div>
+      <svg class="orbit" id="venus-orbit" viewBox="0 0 2000 2000" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.5,1000a997.5,997.5 0 1,0 1995,0a997.5,997.5 0 1,0 -1995,0" vector-effect="non-scaling-stroke" />
+      </svg>
+    </div>
+
+    <div id="mercury-wrapper">
+      <div class="planet" id="mercury">
+        <p class="planet-label" id="mer-label">Mercury</p>
+        <svg class="planet-shape" id="mer-shape" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="mercury-radial" gradientTransform="translate(-50 -50) scale(1.5)"
+              gradientUnits="userSpaceOnUse">
+              <!-- light to dark -->
+              <stop stop-color="#FFE456" />
+              <stop offset="1" stop-color="#FF8E25" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <circle class="outlinePlanet" cx="50" cy="50" r="40" fill="url('#mercury-radial')"
+            vector-effect="non-scaling-stroke" />
+        </svg>
+      </div>
+      <svg class="orbit" id="mercury-orbit" viewBox="0 0 2000 2000" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.5,1000a997.5,997.5 0 1,0 1995,0a997.5,997.5 0 1,0 -1995,0" vector-effect="non-scaling-stroke" />
+      </svg>
+    </div>
+
+    <div id="sun-wrapper">
+      <div class="planet" id="sun">
+        <svg class="planet-shape" id="sun-shape" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="sun-radial" gradientTransform="translate(0.6 0.75) scale(1.2)"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="#52A9FF" stop-opacity="0" />
+              <stop offset="42%" stop-color="#FF6161" stop-opacity="0.3" />
+              <stop offset="1" stop-color="#FFDC7B" />
+            </radialGradient>
+          </defs>
+          <circle class="outlinePlanet" cx="50" cy="50" r="40" fill="url('#sun-radial')"
+            vector-effect="non-scaling-stroke" />
+        </svg>
       </div>
     </div>
-    <script src="scripts/planetData.js"></script>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/bg-comets.js"></script>
-    <script src="scripts/bg-stars.js"></script>
-    <script src="scripts/orbits.js"></script>
-    <script src="scripts/label-animations.js"></script>
-  </body>
+  </div>
+  <!-- end wrapper -->
+
+  <!-- waves in background -->
+  <div class="wave-container">
+    <svg id="wave1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <defs>
+        <linearGradient id="wavy1-linear" gradientTransform="rotate(10)">
+          <stop offset="0%" stop-color="#BD69FF" stop-opacity="0.1" />
+          <stop offset="100%" stop-color="#74FFFF" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#wavy1-linear)"
+        d="M0,64L48,58.7C96,53,192,43,288,74.7C384,107,480,181,576,192C672,203,768,149,864,138.7C960,128,1056,160,1152,149.3C1248,139,1344,85,1392,58.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </div>
+
+  <div class="wave-container">
+    <svg id="wave2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <defs>
+        <linearGradient id="wavy2-linear" gradientTransform="rotate(-10)">
+          <stop offset="0%" stop-color="#BD69FF" stop-opacity="0" />
+          <stop offset="100%" stop-color="#74FFFF" stop-opacity="0.1" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#wavy2-linear)"
+        d="M0,256L48,250.7C96,245,192,235,288,202.7C384,171,480,117,576,85.3C672,53,768,43,864,80C960,117,1056,203,1152,202.7C1248,203,1344,117,1392,74.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </div>
+
+  <script src="scripts/planetData.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/bg-comets.js"></script>
+  <script src="scripts/bg-stars.js"></script>
+  <script src="scripts/orbits.js"></script>
+  <script src="scripts/label-animations.js"></script>
+</body>
+
 </html>
