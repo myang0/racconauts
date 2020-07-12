@@ -1,5 +1,20 @@
+@font-face {
+  font-family: 'GT Haptik';
+  src: url("../fonts/gt-haptik-medium-webfont.ttf") format("truetype");
+}
+
 body {
+  font-family: 'GT Haptik';
   background: #12007a;
+}
+
+.planet-label {
+  margin-top: -25px;
+  position: absolute;
+  font-size: 18px;
+  color: white;
+  opacity: 0;
+  transition: 0.8s;
 }
 
 .wrapper {
