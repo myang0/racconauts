@@ -1,4 +1,7 @@
 var starCount = 100;
+var stars = [];
+
+window.onresize = shiftStars;
 
 function generateStars() {
   for (i = 0; i < starCount; i++) {
@@ -16,7 +19,15 @@ function generateStars() {
   
     starDiv.setAttribute('class', 'star');
   
+    stars.push(starDiv);
     document.querySelector('.hide-overflow').appendChild(starDiv);
+  }
+}
+
+function shiftStars() {
+  for (i = 0; i < stars.length; i++) {
+    stars[i].style.marginLeft = `${Math.floor(Math.random() * window.innerWidth)}px`;
+    stars[i].style.marginTop = `${Math.floor(Math.random() * document.body.scrollHeight)}px`;
   }
 }
 
