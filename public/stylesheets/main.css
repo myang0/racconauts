@@ -8,6 +8,18 @@ body {
   background: #12007a;
 }
 
+.hide-overflow {
+  overflow: hidden;
+}
+
+
+
+.star {
+  position: fixed;
+  z-index: 1;
+  background: #ffffff;
+}
+
 .planet-label {
   margin-top: -25px;
   position: absolute;
