@@ -14,8 +14,8 @@
 }
 
 #jupiter {
-  margin-left: -45px;
-  margin-top: -45px;
+  margin-left: -50px;
+  margin-top: -50px;
 }
 
 #mars {
@@ -38,4 +38,10 @@
   margin-top: -15px;
 }
 
+#sun {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
 

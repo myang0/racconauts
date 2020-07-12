@@ -1,44 +1,87 @@
-#neptune-wrapper {
+.orbit {
+  stroke: #F097FF;
+  stroke-width: 2;
+  mix-blend-mode: soft-light;
+  opacity: 25%;
+  max-width: 100%;
+}
 
+/* #neptune-wrapper, #uranus-wrapper, #saturn-wrapper,
+#jupiter-wrapper, #mars-wrapper, #earth-wrapper,
+#venus-wrapper, #mercury-wrapper, #sun-wrapper {
+  display: block;
+} */
+
+#neptune-wrapper {
+  margin: 0;
+  max-width: 100%;
 }
 
 #uranus-wrapper {
-  margin-top: -1360px;
-  margin-left: 50px;
+  /* margin-top: -1360px;
+  margin-left: 50px; */
+
+  margin: -95% auto auto auto;
+  max-width: 90%;
 }
 
 #saturn-wrapper {
-  margin-top: -1230px;
-  margin-left: 125px;
+  /* margin-top: -1230px;
+  margin-left: 125px; */
+
+  margin: -85% auto 0 auto;
+  max-width: 80%;
 }
 
 #jupiter-wrapper {
-  margin-top: -1065px;
-  margin-left: 212px;
+  /* margin-top: -1065px;
+  margin-left: 212px; */
+
+  margin: -73% auto 0 auto;
+  max-width: 65%;
 }
 
 #mars-wrapper {
-  margin-top: -875px;
-  margin-left: 325px;
+  /* margin-top: -875px;
+  margin-left: 325px; */
+
+  margin: -57% auto 0 auto;
+  max-width: 50%;
 }
 
 #earth-wrapper {
-  margin-top: -695px;
-  margin-left: 387px;
+  /* margin-top: -695px;
+  margin-left: 387px; */
+  margin: -45% auto 0 auto;
+  max-width: 40%;
 }
 
 #venus-wrapper {
-  margin-top: -570px;
-  margin-left: 450px;
+  /* margin-top: -570px;
+  margin-left: 450px; */
+  margin: -35% auto 0 auto;
+  max-width: 30%;
 }
 
 #mercury-wrapper {
-  margin-top: -445px;
-  margin-left: 512px;
+  /* margin-top: -445px;
+  margin-left: 512px; */
+  margin: -25% auto 0 auto;
+  max-width: 20%;
 }
 
 #sun-wrapper {
-  margin-top: -315px;
+  /* margin-top: -315px;
   margin-left: 580px;
-  margin-bottom: 575px;
+  margin-bottom: 575px; */
+
+  margin: -20% auto 0 auto;
+  max-width: 20%;  
+}
+
+@media screen and (min-width: 1440px) {
+  #sun-wrapper {
+    margin: -18% auto 0 auto;
+    max-width: 20%;    
+  }
 }
