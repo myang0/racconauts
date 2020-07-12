@@ -12,12 +12,15 @@ body {
   overflow: hidden;
 }
 
-
-
 .star {
   position: fixed;
   z-index: 1;
   background: #ffffff;
+}
+
+.comet {
+  position: fixed;
+  z-index: 2;
 }
 
 .planet-label {
