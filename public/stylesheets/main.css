@@ -72,6 +72,11 @@ body {
   background: #ffffff;
 }
 
+.comet {
+  position: fixed;
+  z-index: 2;
+}
+
 .planet-label {
   margin-top: -2rem;
   margin-left: auto;
