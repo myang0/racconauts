@@ -20,13 +20,6 @@ html, body {
 }
 
 @font-face {
-  font-family: 'GT Haptik Light', Arial, Helvetica, sans-serif;
-  src: url('../fonts/gt-haptik-light-webfont.ttf') format('truetype');
-  font-weight: lighter;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'GT Haptik Medium', Arial, Helvetica, sans-serif;
   src: url('../fonts/gt-haptik-medium-webfont.ttf') format('truetype');
   font-weight: normal;
@@ -72,7 +65,7 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   color: #FFF;
-  margin: 0.5rem 0 1.25rem 0;
+  margin: 0.5rem 0 1rem 0;
 }
 
 h2 {
@@ -87,13 +80,24 @@ a {
   text-decoration: none;
 }
 
+#moon {
+  width: 40px;
+  margin-right: 2rem;
+  height: auto;
+  display: inline-block;
+  fill: #FFE9AF;
+  mix-blend-mode: color-dodge;
+}
+
 #intro {
   position: absolute;
   margin: 4rem;
-  left: -34rem;
-  width: 30rem;
+}
+
+#intro-text{
   display: inline-block;
 }
+
 
 #detail-table {
   position: fixed;
@@ -169,14 +173,6 @@ table {
 .planet-shape {
   max-width: 100%;
   height: auto;
-}
-
-#moon {
-  width: 50px;
-  height: auto;
-  display: inline-block;
-  fill: #FFE9AF;
-  mix-blend-mode: color-dodge;
 }
 
 #sun-shape {

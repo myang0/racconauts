@@ -15,6 +15,18 @@ for (i = 0; i < planets.length; i++) {
 
 anime({
   targets: '#intro',
-  translateX: 350,
-  easing: 'spring(1, 80, 10, 0)'
+  translateY: 5,
+  direction: 'alternate',
+  duration: 1000,
+  loop: true,
+  easing: 'cubicBezier(0.445, 0.05, 0.55, 0.95)'
+});
+
+anime({
+  targets: '#moon',
+  scale: 1.2,
+  rotate: '10deg',
+  direction: 'alternate',
+  loop: true,
+  easing: 'cubicBezier(.5, .05, .1, .3)'
 });
