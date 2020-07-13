@@ -72,11 +72,11 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   color: #FFF;
-  margin: 0.5rem 0 1.5rem 0;
+  margin: 0.5rem 0 1.25rem 0;
 }
 
 h2 {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   letter-spacing: 0.05rem;
   font-weight: normal;
   color: #DBFDFF;
@@ -87,30 +87,12 @@ a {
   text-decoration: none;
 }
 
-.btn {
-  position: relative;
+#intro {
+  position: absolute;
+  margin: 4rem;
+  left: -34rem;
+  width: 30rem;
   display: inline-block;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 0.08rem;
-
-  margin-top: 1.2rem;
-  padding: 0.6rem 1.3rem;
-  font-weight: bold;
-  color: #FFF;
-  background-color: #15F1FF80;
-  mix-blend-mode: color-dodge;
-
-  border: 1.5px solid #15F1FF;
-  border-radius: 0.3rem;
-
-  transition: background 0.8s ease-in-out;
-}
-
-.btn:hover {
-  background-color:#71D1FF80;
-
-  transition: background 0.8s ease-in-out;
 }
 
 #detail-table {
@@ -189,9 +171,12 @@ table {
   height: auto;
 }
 
-#intro {
-  position: relative;
-  margin: 2rem;
+#moon {
+  width: 50px;
+  height: auto;
+  display: inline-block;
+  fill: #FFE9AF;
+  mix-blend-mode: color-dodge;
 }
 
 #sun-shape {
@@ -326,4 +311,20 @@ table {
 @-ms-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #007ff50D;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #F097FF40; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F097FF80; 
 }

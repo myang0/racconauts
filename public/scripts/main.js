@@ -13,16 +13,8 @@ for (i = 0; i < planets.length; i++) {
   })(i);
 }
 
-// for (i = 0; i < planets.length; i++) {
-//   (function(index) {
-//     planets[index].addEventListener("click", function() {
-        
-//         if (document.body.contains(detailTables)) {
-//             detailTables.parentNode.removeChild(detailTables);
-//         } else {
-//             getPlanet(planetNames[index]);
-//             body.appendChild(document.importNode(detailContainer.content, true));
-//         }
-//     });
-//   })(i);
-// }
+anime({
+  targets: '#intro',
+  translateX: 350,
+  easing: 'spring(1, 80, 10, 0)'
+});
