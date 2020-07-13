@@ -31,3 +31,11 @@ anime({
   loop: true,
   easing: 'cubicBezier(.5, .05, .1, .3)'
 });
+
+anime({
+  targets: '#asteroid-belt',
+  rotate: '-1turn',
+  duration: 50000,
+  loop: true,
+  easing: 'linear'
+})

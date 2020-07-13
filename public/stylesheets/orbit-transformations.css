@@ -45,7 +45,7 @@
 #asteroid-belt{
   stroke-linecap: round;
   stroke-dasharray: 10, 20, 40;
-  stroke: #F097FF;
+  stroke: #F097FF80;
   stroke-width: 4;
   mix-blend-mode: color-dodge;
 }

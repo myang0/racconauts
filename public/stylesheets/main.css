@@ -33,12 +33,12 @@ html, body {
   font-style: normal;
 }
 
-/*  #FFB5B5 to #0080F5 */
 body {
   margin: 0;
+  background-color: #101120;
   background: radial-gradient(circle at 0 0, #F097FF0D 0%, #828BD80D 30%, #007ff50D 100%), #101120;
   background-blend-mode: color-dodge, normal;
-  font-family: 'GT Haptik', Arial, Helvetica, sans-serif;
+  font-family: 'GT Haptik', Helvetica, Arial, sans-serif;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -324,3 +324,4 @@ table {
 ::-webkit-scrollbar-thumb:hover {
   background: #F097FF80; 
 }
+
