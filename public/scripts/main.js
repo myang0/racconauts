@@ -26,6 +26,7 @@ anime({
   targets: '#moon',
   scale: 1.2,
   rotate: '10deg',
+  duration: 2000,
   direction: 'alternate',
   loop: true,
   easing: 'cubicBezier(.5, .05, .1, .3)'
