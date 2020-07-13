@@ -3,6 +3,8 @@ const apiData = {
 }
 var planetNames = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"];
 
+var detailContainer = document.getElementById('detail-table');
+
 function getPlanet(planetName){
   const apiUrl = `${apiData.url}${planetName}`
 
@@ -22,57 +24,54 @@ const generateHtml = (planetJson) => {
   header.className = planetJson.englishName.toString().toLowerCase();
   table.appendChild(header);
   table.className = header.className.concat("Table");
-  table.style.width  = '200px';
-  table.style.border = '1px solid black';
   
 
   for(var i = 0; i < 4; i++){
     var tr = table.insertRow();
-    var td = tr.insertCell();
     var th = document.createElement('th');
+    th = tr.appendChild(th);
+    var td = document.createElement('td');
 
     switch(i) {
       case 0:
-        td.className = "massTitle";
-        th.className = "massValue";
-        td.innerHTML = "Mass";
-        th.innerHTML = planetJson.mass.massValue.toString()
-          .concat("*10^")
-          .concat(planetJson.mass.massExponent.toString())
-          .concat("kg");
+        th.className = "massTitle tableTitle";
+        td.className = "massValue tableValue";
+        th.innerHTML = "Mass";
+        td.innerHTML = planetJson.mass.massValue.toString()
+          .concat(" × 10")
+          .concat(planetJson.mass.massExponent.toString().sup())
+          .concat(" kg");
         break;
       case 1:
-        td.className = "volume";
-        th.className = "volumeValue";
-        td.innerHTML = "Volume";
-        th.innerHTML = planetJson.vol.volValue.toString()
-          .concat("*10^")
-          .concat(planetJson.vol.volExponent.toString())
-          .concat(" km^3");
+        th.className = "volume tableTitle";
+        td.className = "volumeValue tableValue";
+        th.innerHTML = "Volume";
+        td.innerHTML = planetJson.vol.volValue.toString()
+          .concat(" × 10")
+          .concat(planetJson.vol.volExponent.toString().sup())
+          .concat(" km" + "3".sup());
         break;
       case 2:
-        td.className = "density";
-        th.className = "densityValue";
-        td.innerHTML = "Density";
-        th.innerHTML = planetJson.density.toString()
-          .concat(" g/cm^3");
+        th.className = "density tableTitle";
+        td.className = "densityValue tableValue";
+        th.innerHTML = "Density";
+        td.innerHTML = planetJson.density.toString()
+          .concat(" g/cm" + "3".sup());
         break;
       case 3:
-        td.className = "gravity";
-        th.className = "gravityValue";
-        td.innerHTML = "Gravity";
-        th.innerHTML = planetJson.gravity.toString()
-          .concat(" m/s^2");
+        th.className = "gravity tableTitle";
+        td.className = "gravityValue tableValue";
+        th.innerHTML = "Gravity";
+        td.innerHTML = planetJson.gravity.toString()
+          .concat(" m/s" + "2".sup());
         break;
     }
-    tr.appendChild(th);
-    td.style.border = '1px solid black';
-    td.style.color = "white";
-    th.style.color = "white";
-    header.style.color = "white";
+
+    tr.appendChild(td);
 
   }
-  body.appendChild(table);
+
+  detailContainer.appendChild(table).toggle();
 }
 
-planetNames.forEach(getPlanet);
+// planetNames.forEach(getPlanet);
