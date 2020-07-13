@@ -288,4 +288,12 @@ table {
   /* animation: animateWave 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards; */
 }
 
-
+.raccoonaut {
+  position: fixed;
+  max-width: 100%;
+  width: 65px; /*change this width for sizing */
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
