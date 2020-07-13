@@ -4,6 +4,7 @@ const apiData = {
 var planetNames = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"];
 
 var detailContainer = document.getElementById('detail-table');
+var currentPlanetTable;
 
 function getPlanet(planetName){
   const apiUrl = `${apiData.url}${planetName}`
@@ -14,7 +15,7 @@ function getPlanet(planetName){
 }
 
 const generateHtml = (planetJson) => {
-  console.log(planetJson);
+  if (currentPlanetTable != undefined) detailContainer.removeChild(currentPlanetTable);
 
   var body = document.body,
       table  = document.createElement('table'),
@@ -71,7 +72,9 @@ const generateHtml = (planetJson) => {
 
   }
 
-  detailContainer.appendChild(table).toggle();
+  currentPlanetTable = table;
+
+  detailContainer.appendChild(table);
 }
 
 // planetNames.forEach(getPlanet);
