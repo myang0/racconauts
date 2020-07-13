@@ -13,16 +13,29 @@ for (i = 0; i < planets.length; i++) {
   })(i);
 }
 
-// for (i = 0; i < planets.length; i++) {
-//   (function(index) {
-//     planets[index].addEventListener("click", function() {
-        
-//         if (document.body.contains(detailTables)) {
-//             detailTables.parentNode.removeChild(detailTables);
-//         } else {
-//             getPlanet(planetNames[index]);
-//             body.appendChild(document.importNode(detailContainer.content, true));
-//         }
-//     });
-//   })(i);
-// }
+anime({
+  targets: '#intro',
+  translateY: 5,
+  direction: 'alternate',
+  duration: 1000,
+  loop: true,
+  easing: 'cubicBezier(0.445, 0.05, 0.55, 0.95)'
+});
+
+anime({
+  targets: '#moon',
+  scale: 1.2,
+  rotate: '10deg',
+  duration: 2000,
+  direction: 'alternate',
+  loop: true,
+  easing: 'cubicBezier(.5, .05, .1, .3)'
+});
+
+anime({
+  targets: '#asteroid-belt',
+  rotate: '-1turn',
+  duration: 50000,
+  loop: true,
+  easing: 'linear'
+})

@@ -20,13 +20,6 @@ html, body {
 }
 
 @font-face {
-  font-family: 'GT Haptik Light', Arial, Helvetica, sans-serif;
-  src: url('../fonts/gt-haptik-light-webfont.ttf') format('truetype');
-  font-weight: lighter;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'GT Haptik Medium', Arial, Helvetica, sans-serif;
   src: url('../fonts/gt-haptik-medium-webfont.ttf') format('truetype');
   font-weight: normal;
@@ -40,12 +33,12 @@ html, body {
   font-style: normal;
 }
 
-/*  #FFB5B5 to #0080F5 */
 body {
   margin: 0;
+  background-color: #101120;
   background: radial-gradient(circle at 0 0, #F097FF0D 0%, #828BD80D 30%, #007ff50D 100%), #101120;
   background-blend-mode: color-dodge, normal;
-  font-family: 'GT Haptik', Arial, Helvetica, sans-serif;
+  font-family: 'GT Haptik', Helvetica, Arial, sans-serif;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -72,11 +65,11 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   color: #FFF;
-  margin: 0.5rem 0 1.5rem 0;
+  margin: 0.5rem 0 1rem 0;
 }
 
 h2 {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   letter-spacing: 0.05rem;
   font-weight: normal;
   color: #DBFDFF;
@@ -87,31 +80,24 @@ a {
   text-decoration: none;
 }
 
-.btn {
-  position: relative;
+#moon {
+  width: 40px;
+  margin-right: 2rem;
+  height: auto;
   display: inline-block;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 0.08rem;
-
-  margin-top: 1.2rem;
-  padding: 0.6rem 1.3rem;
-  font-weight: bold;
-  color: #FFF;
-  background-color: #15F1FF80;
+  fill: #FFE9AF;
   mix-blend-mode: color-dodge;
-
-  border: 1.5px solid #15F1FF;
-  border-radius: 0.3rem;
-
-  transition: background 0.8s ease-in-out;
 }
 
-.btn:hover {
-  background-color:#71D1FF80;
-
-  transition: background 0.8s ease-in-out;
+#intro {
+  position: absolute;
+  margin: 4rem;
 }
+
+#intro-text{
+  display: inline-block;
+}
+
 
 #detail-table {
   position: fixed;
@@ -187,11 +173,6 @@ table {
 .planet-shape {
   max-width: 100%;
   height: auto;
-}
-
-#intro {
-  position: relative;
-  margin: 2rem;
 }
 
 #sun-shape {
@@ -327,3 +308,20 @@ table {
   0% {opacity:0;}
   100% {opacity:1;}
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #007ff50D;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #F097FF40; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F097FF80; 
+}
+
