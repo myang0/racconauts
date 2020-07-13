@@ -22,7 +22,7 @@ html, body {
 @font-face {
   font-family: 'GT Haptik Light', Arial, Helvetica, sans-serif;
   src: url('../fonts/gt-haptik-light-webfont.ttf') format('truetype');
-  font-weight: light;
+  font-weight: lighter;
   font-style: normal;
 }
 
@@ -66,6 +66,92 @@ body {
   padding-bottom: 100%;
 }
 
+h1 {
+  font-size: 1.8rem;
+  letter-spacing: 0.15rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FFF;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+h2 {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  font-weight: normal;
+  color: #DBFDFF;
+  margin:0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08rem;
+
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.3rem;
+  font-weight: bold;
+  color: #FFF;
+  background-color: #15F1FF80;
+  mix-blend-mode: color-dodge;
+
+  border: 1.5px solid #15F1FF;
+  border-radius: 0.3rem;
+
+  transition: background 0.8s ease-in-out;
+}
+
+.btn:hover {
+  background-color:#71D1FF80;
+
+  transition: background 0.8s ease-in-out;
+}
+
+#detail-table {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+table, th, td, tr {
+  border: none;
+  color: #FFF;
+  border-collapse: separate;
+  border-spacing: 1.2rem;
+  letter-spacing: 0.06rem;
+}
+
+table {
+  width: 35rem;
+  max-width: 100%;
+  background-image: linear-gradient(#BD69FF33, #74FFFF00);
+  background-blend-mode: color-dodge;
+  padding: 2.5rem 2rem 4rem 2rem;
+}
+
+.tableTitle {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  width: 40%;
+  color: #EDD6FF;
+  /* width: 100px; */
+}
+
+.tableValue {
+  font-weight: normal;
+  font-size: 1.2rem;
+  letter-spacing: 0.15rem;
+  width: 60%;
+  /* width: 100px; */
+
+}
+
 .star {
   position: fixed;
   z-index: 1;
@@ -107,53 +193,6 @@ body {
   position: relative;
   margin: 2rem;
 }
-
-a {
-  text-decoration: none;
-}
-
-h1 {
-  font-size: 1.8rem;
-  letter-spacing: 0.15rem;
-  font-weight: bold;
-  color: #FFF;
-  margin: 0.2rem 0;
-}
-
-h2 {
-  font-size: 0.9rem;
-  letter-spacing: 0.05rem;
-  font-weight: normal;
-  color: #DBFDFF;
-  margin:0;
-}
-
-.btn {
-  position: relative;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 0.08rem;
-
-  margin-top: 1.2rem;
-  padding: 0.6rem 1.3rem;
-  font-weight: bold;
-  color: #FFF;
-  background-color: #15F1FF80;
-  mix-blend-mode: color-dodge;
-
-  border: 1.5px solid #15F1FF;
-  border-radius: 0.3rem;
-
-  transition: background 0.8s ease-in-out;
-}
-
-.btn:hover {
-  background-color:#71D1FF80;
-
-  transition: background 0.8s ease-in-out;
-}
-
 
 #sun-shape {
   /* width: 20%; */
